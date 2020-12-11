@@ -23,7 +23,7 @@ class Trie:
             if current.link[index] is None:
                 return False
             current = current.link[index]
-        return current.link[0] is None
+        return current.link[0] is not None
 
     def inorder_traversal(self, source):
         pass
@@ -43,3 +43,5 @@ class Node:
 if __name__ == "__main__":
     trie_words = ["taco", "taro", "tarot", "coco", "chobo"]
     new_Trie = Trie(trie_words)
+    for word in trie_words:
+        print(new_Trie.search(word))
