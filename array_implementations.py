@@ -253,6 +253,11 @@ class ArrayList(List[T]):
         self.length += 1
 
     def append(self, item: T) -> None:
+        """
+        Insert item to final index
+        :param item:
+        :return:
+        """
         if len(self) == len(self.array):
             self._resize()
         self.array[len(self)] = item
